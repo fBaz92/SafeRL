@@ -2,6 +2,8 @@
 import os; os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 import gym, sys
 
+env = gym.make( "light_safety_gym:point_discrete-v0" )
+
 
 # Load the PPO algorithm for discrete action space and start the training
 def main_discrete_PPO( env, verbose=1, episodes=5000, render=False ):

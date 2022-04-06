@@ -1,0 +1,8 @@
+FROM python:3.9-bullseye
+WORKDIR /SafeRL/environments
+COPY ./environments ./
+WORKDIR /SafeRL
+RUN pip install -e environments
+COPY . .
+RUN python test.py -PPO_discrete
+#CMD ["sh"]
